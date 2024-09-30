@@ -20,6 +20,7 @@
   $parametro= trim($parametro,",");
   $dirController =  "Controllers/".$controller.".php";
 
+  require_once "Config/App/autoload.php";
   if(file_exists($dirController)){
     require_once $dirController;
     $controller = new $controller;
